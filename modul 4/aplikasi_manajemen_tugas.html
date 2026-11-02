@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Manajemen Tugas</title>
+    <link rel="stylesheet" href="20251320011_style.css">
+
+    <style>
+        .detail-page {
+            padding: 40px 12%;
+            background: #f7f8fa;
+            min-height: 70vh;
+        }
+
+        .detail-card {
+            padding: 30px;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 3px 6px rgba(0,0,0,.1);
+        }
+
+        .detail-card h1 {
+            color: #087bff;
+        }
+
+        .task-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .task-form input {
+            flex: 1;
+            min-width: 180px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .task-form button {
+            padding: 12px 18px;
+            border: none;
+            border-radius: 5px;
+            background: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+
+        .task-list li {
+            margin: 12px 0;
+            cursor: pointer;
+        }
+
+        .task-list li.done {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        @media (max-width: 760px) {
+            .detail-page { padding: 25px 7%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header class="navbar">
+            <h3 class="logo">Mahasiswa UKRI</h3>
+            <nav>
+                <a href="20251320011_m4_t1.html">Beranda</a>
+                <a href="20251320011_m4_t1.html">Proyek</a>
+                <a href="kontak.html">Kontak</a>
+            </nav>
+        </header>
+
+        <main class="detail-page">
+            <a href="20251320011_m4_t1.html" class="project-link">
+                &larr; Kembali ke Portofolio
+            </a>
+
+            <div class="detail-card">
+                <h1>Aplikasi Manajemen Tugas</h1>
+                <p>
+                    Tambahkan tugas dan klik tugas untuk menandainya selesai.
+                </p>
+
+                <form class="task-form" id="task-form">
+                    <input
+                        type="text"
+                        id="task-input"
+                        placeholder="Masukkan tugas baru..."
+                        required
+                    >
+                    <button type="submit">Tambah Tugas</button>
+                </form>
+
+                <ul class="task-list" id="task-list">
+                    <li>Pelajari HTML dan CSS</li>
+                    <li>Selesaikan tugas kuliah</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Mahasiswa UKRI. Dibuat dengan penuh semangat.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const form = document.getElementById("task-form");
+        const input = document.getElementById("task-input");
+        const list = document.getElementById("task-list");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const taskText = input.value.trim();
+
+            if (taskText === "") return;
+
+            const item = document.createElement("li");
+            item.textContent = taskText;
+            list.appendChild(item);
+
+            input.value = "";
+            input.focus();
+        });
+
+        list.addEventListener("click", function(event) {
+            if (event.target.tagName === "LI") {
+                event.target.classList.toggle("done");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Toko Online</title>
+    <link rel="stylesheet" href="20251320011_style.css">
+
+    <style>
+        .detail-page {
+            padding: 40px 12%;
+            background: #f7f8fa;
+            min-height: 70vh;
+        }
+
+        .detail-card {
+            padding: 30px;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 3px 6px rgba(0,0,0,.1);
+        }
+
+        .detail-card h1 {
+            color: #087bff;
+        }
+
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .product {
+            padding: 20px;
+            border-radius: 7px;
+            background: #f7f8fa;
+            border: 1px solid #ddd;
+        }
+
+        @media (max-width: 760px) {
+            .detail-page { padding: 25px 7%; }
+            .product-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header class="navbar">
+            <h3 class="logo">Mahasiswa UKRI</h3>
+            <nav>
+                <a href="20251320011_m4_t1.html">Beranda</a>
+                <a href="20251320011_m4_t1.html">Proyek</a>
+                <a href="20251320011_m4_t1.html">Kontak</a>
+            </nav>
+        </header>
+
+        <main class="detail-page">
+            <a href="20251320011_m4_t1.html" class="project-link">
+                &larr; Kembali ke Portofolio
+            </a>
+
+            <div class="detail-card">
+                <h1>Website Toko Online</h1>
+                <p>
+                    Contoh website toko online untuk menampilkan produk,
+                    harga, dan informasi pemesanan.
+                </p>
+
+                <h2>Daftar Produk</h2>
+
+                <div class="product-list">
+                    <article class="product">
+                        <h3>Produk A</h3>
+                        <p>Produk pilihan untuk kebutuhan sehari-hari.</p>
+                        <strong>Rp50.000</strong>
+                    </article>
+
+                    <article class="product">
+                        <h3>Produk B</h3>
+                        <p>Produk berkualitas dengan desain menarik.</p>
+                        <strong>Rp75.000</strong>
+                    </article>
+
+                    <article class="product">
+                        <h3>Produk C</h3>
+                        <p>Produk unggulan untuk melengkapi kebutuhanmu.</p>
+                        <strong>Rp100.000</strong>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Mahasiswa UKRI. Dibuat dengan penuh semangat.</p>
+        </footer>
+
+    </div>
+</body>
+</html>

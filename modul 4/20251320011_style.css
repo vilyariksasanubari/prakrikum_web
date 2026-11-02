@@ -1,0 +1,325 @@
+
+/* =========================
+   PENGATURAN DASAR
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: white;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 10%;
+    background: white;
+}
+
+.logo {
+    margin: 0;
+    color: #087bff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.navbar nav a {
+    color: #30343b;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.navbar nav a:hover {
+    color: #087bff;
+}
+
+/* =========================
+   BERANDA / HERO
+========================= */
+.hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(200px, 1fr);
+    gap: 30px;
+    align-items: center;
+    padding: 35px 10%;
+    background: #e9ecef;
+}
+
+.hero-content {
+    min-width: 0;
+}
+
+.hero-content h1 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #087bff;
+    font-size: 28px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholder {
+    width: 200px;
+    height: 200px;
+    min-height: 0;
+    display: grid;
+    place-items: center;
+    border: 3px solid white;
+    border-radius: 50%;
+    background: #dedede;
+    color: #999;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* =========================
+   TOMBOL
+========================= */
+.btn {
+    display: inline-block;
+    margin: 8px 8px 0 0;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 4px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #218838;
+}
+
+/* =========================
+   BAGIAN PROYEK
+========================= */
+.projects {
+    padding: 30px 10%;
+    background: #f7f8fa;
+}
+
+.projects h2 {
+    margin: 0 0 20px;
+    color: #087bff;
+    text-align: center;
+    font-size: 24px;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.project-card {
+    overflow: hidden;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+.project-image {
+    min-height: 112px;
+    display: grid;
+    place-items: center;
+    padding: 15px;
+    background: #929eb3;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.image-two {
+    background: #c3b2b4;
+}
+
+.image-three {
+    background: #a99e9e;
+}
+
+.project-info {
+    padding: 10px 12px;
+}
+
+.project-info h3 {
+    margin: 0 0 5px;
+    color: #30343b;
+    font-size: 12px;
+}
+
+.project-info p {
+    margin: 0;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #087bff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   KONTAK
+========================= */
+.contact {
+    padding: 30px 10%;
+    border-top: 1px solid #e5e5e5;
+    background: white;
+}
+
+.contact h2 {
+    color: #087bff;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    padding: 20px 10px;
+    background: #343a40;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* =========================
+   TAMPILAN TABLET
+========================= */
+@media (max-width: 1000px) {
+    .navbar {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .hero,
+    .projects,
+    .contact {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .placeholder {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+/* =========================
+   TAMPILAN HP
+========================= */
+@media (max-width: 760px) {
+    .container {
+        width: 100%;
+    }
+
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 15px 7%;
+    }
+
+    .navbar nav {
+        gap: 16px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 35px 7%;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+        white-space: normal;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+
+    .hero-image {
+        margin-top: 10px;
+    }
+
+    .placeholder {
+        width: 150px;
+        height: 150px;
+        font-size: 18px;
+    }
+
+    .projects {
+        padding: 30px 7%;
+    }
+
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        min-height: 140px;
+    }
+
+    .project-info h3 {
+        font-size: 14px;
+    }
+
+    .project-info p {
+        font-size: 12px;
+    }
+
+    .contact {
+        padding: 30px 7%;
+    }
+}
